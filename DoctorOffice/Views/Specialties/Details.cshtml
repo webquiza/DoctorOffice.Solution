@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+@model DoctorOffice.Models.Specialty
+
+<h2>Specialty Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
+<p>@Html.ActionLink("Edit Specialty", "Edit", new { id = Model.SpecialtyId })</p>
+<p>@Html.ActionLink("Delete Specialty", "Delete", new { id = Model.SpecialtyId })</p>
+<p>@Html.ActionLink("Back to list", "Index")</p>
