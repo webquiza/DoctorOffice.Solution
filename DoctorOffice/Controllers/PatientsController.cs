@@ -61,7 +61,11 @@ namespace DoctorOffice.Controllers
       if (DoctorId != 0)
       {
         _db.DoctorPatient.Add(new DoctorPatient() { DoctorId = DoctorId, PatientId = patient.PatientId });
-      }
+      //   if (_db.DoctorPatient != null)
+      //   {
+      //     return RedirectToAction("Index");
+      //   }
+      // }
       _db.Entry(patient).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
